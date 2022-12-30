@@ -11,6 +11,7 @@ public class BOJ_2577_숫자의개수 {
     private static int num;
     private static int[] arr;
     private static String str;
+    private static String str2;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,10 +19,12 @@ public class BOJ_2577_숫자의개수 {
         B = sc.nextInt();
         C = sc.nextInt();
         arr = new int[10];
-        str = String.valueOf(A * B * C);
+//        str = String.valueOf(A * B * C);
+        str2 = Integer.toString(A * B * C);
 
         for (int i = 0; i < str.length(); i++) {
-            arr[str.charAt(i) - '0']++;
+//            arr[str.charAt(i) - '0']++;
+            arr[str2.charAt(i) - 48]++;
         }
 
         for (int i : arr) {
