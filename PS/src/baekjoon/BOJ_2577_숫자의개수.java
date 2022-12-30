@@ -8,7 +8,6 @@ public class BOJ_2577_숫자의개수 {
     private static int A;
     private static int B;
     private static int C;
-    private static int num;
     private static int[] arr;
     private static String str;
     private static String str2;
