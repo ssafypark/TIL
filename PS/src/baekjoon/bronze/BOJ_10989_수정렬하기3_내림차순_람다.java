@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class BOJ_10989_수정렬하기3_내림차순연습 {
+public class BOJ_10989_수정렬하기3_내림차순_람다 {
 
     private static int N;
     private static Integer[] arr;
@@ -20,12 +20,7 @@ public class BOJ_10989_수정렬하기3_내림차순연습 {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
-        Arrays.sort(arr, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2 - o1;
-            }
-        });
+        Arrays.sort(arr, (o1, o2) -> o2 - o1);
 
         for (int i = 0; i < N; i++) {
             sb.append(arr[i]).append('\n');
