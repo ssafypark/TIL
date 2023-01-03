@@ -21,7 +21,6 @@ public class BOJ_2675_문자열반복 {
             S = str[1];
 
             for (int j = 0; j < S.length(); j++) {
-
                 for (int k = 0; k < R; k++) {
                     System.out.print(S.charAt(j));
                 }
