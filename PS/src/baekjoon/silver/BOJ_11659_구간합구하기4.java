@@ -20,20 +20,17 @@ public class BOJ_11659_구간합구하기4 {
         StringTokenizer st = new StringTokenizer(bf.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        arr = new int[N];
+        arr = new int[N + 1];
         st = new StringTokenizer(bf.readLine());
-        for (int i = 0; i < N; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
+        for (int i = 1; i < N + 1; i++) {
+            arr[i] = arr[i - 1] + Integer.parseInt(st.nextToken());
         }
         while (TC++ < M) {
             total = 0;
             st = new StringTokenizer(bf.readLine());
             start = Integer.parseInt(st.nextToken());
             end = Integer.parseInt(st.nextToken());
-            for (int i = start - 1; i < end; i++) {
-                total += arr[i];
-            }
-            System.out.println(total);
+            System.out.println(arr[end] - arr[start - 1]);
         }
     }
 }
