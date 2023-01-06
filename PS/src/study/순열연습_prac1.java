@@ -4,9 +4,11 @@ import java.util.Arrays;
 
 public class 순열연습_prac1 {
 
-    static int N, R; // N 중에 R개 선택하여 조합
-    static int[] data, sel;
-    static boolean[] visited;
+    private static int N; // N 중에 R개 선택하여 조합
+    private static int R; // N 중에 R개 선택하여 조합
+    private static int[] data;
+    private static int[] sel;
+    private static boolean[] visited;
 
     public static void main(String[] args) {
         N = 4;

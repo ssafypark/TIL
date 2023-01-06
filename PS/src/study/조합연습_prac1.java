@@ -4,8 +4,10 @@ import java.util.Arrays;
 
 public class 조합연습_prac1 {
 
-    static int N, R; // N 중에 R개 선택하여 조합
-    static int[] data, sel;
+    private static int N; // N 중에 R개 선택하여 조합
+    private static int R; // N 중에 R개 선택하여 조합
+    private static int[] data;
+    private static int[] sel;
 
     public static void main(String[] args) {
         N = 6;
@@ -16,7 +18,7 @@ public class 조합연습_prac1 {
 
         print("반복을 이용한 조합 - 무조건 3개 뽑기");
         comb1();
-        print("반복+재귀를 이용한 조합 - 무조건 3개 뽑기");
+        print("반복 + 재귀를 이용한 조합 - 무조건 3개 뽑기");
         comb2(0, 0);
         print("재귀를 이용한 조합 - 무조건 3개 뽑기");
         comb3(0, 0);

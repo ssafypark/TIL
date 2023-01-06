@@ -2,8 +2,10 @@ package study;
 
 public class 순열연습_prac2 {
 
-    private static int N, R; // N 중에 R개 선택하여 조합
-    private static int[] data, sel;
+    private static int N; // N 중에 R개 선택하여 조합
+    private static int R; // N 중에 R개 선택하여 조합
+    private static int[] data;
+    private static int[] sel;
     private static boolean[] visited;
 
     public static void main(String[] args) {
