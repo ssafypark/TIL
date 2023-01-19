@@ -1,9 +1,9 @@
-package swea;
+package swea.d2;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SWEA_1966_숫자를정렬하자_D2 {
+public class SWEA_1966_숫자를정렬하자 {
 
     private static int T;
     private static int N;
