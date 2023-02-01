@@ -1,10 +1,7 @@
 package baekjoon.silver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class BOJ_11724_연결요소의개수 {
 
@@ -48,7 +45,7 @@ public class BOJ_11724_연결요소의개수 {
         }
         visited[v] = true;
         for (int i : graph[v]) {
-            if (visited[i] == false) {
+            if (!visited[i]) {
                 DFS(i);
             }
         }
