@@ -11,7 +11,6 @@ public class BOJ_15650_N과M2 {
     private static int M;
     private static int[] arr;
     private static int[] output;
-    private static boolean[] visited;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +19,6 @@ public class BOJ_15650_N과M2 {
         M = Integer.parseInt(st.nextToken());
         arr = new int[N];
         output = new int[N];
-        visited = new boolean[N];
         for (int i = 0; i < N; i++) {
             arr[i] += i +1;
         }
@@ -36,10 +34,8 @@ public class BOJ_15650_N과M2 {
             System.out.println(sb);
         }
         for (int i = idx; i < N; i++) {
-            if (!visited[i]) {
-                output[depth] = arr[i];
-                combination(depth + 1, i + 1);
-            }
+            output[depth] = arr[i];
+            combination(depth + 1, i + 1);
         }
     }
 }
