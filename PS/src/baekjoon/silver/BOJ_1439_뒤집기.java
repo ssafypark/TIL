@@ -21,7 +21,6 @@ public class BOJ_1439_뒤집기 {
             System.out.println(0);
             return;
         }
-        System.out.println(cnt);
-//        System.out.println(cnt / 2 + cnt % 2);
+        System.out.println(cnt / 2 + cnt % 2);
     }
 }
