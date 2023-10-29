@@ -10,7 +10,6 @@ public class BOJ_5086_배수와약수 {
     private static int N;
     private static int M;
     private static int temp;
-    private static boolean flag = true;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
