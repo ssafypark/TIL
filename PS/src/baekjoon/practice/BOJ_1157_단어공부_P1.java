@@ -13,15 +13,10 @@ public class BOJ_1157_단어공부_P1 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        str = br.readLine();
+        str = br.readLine().toUpperCase();
         cnt = new int[26];
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if ('A' <= ch && ch <= 'Z') {
-                cnt[ch - 'A']++;
-            } else {
-                cnt[ch - 'a']++;
-            }
+            cnt[str.charAt(i) - 'A']++;
         }
         for (int i = 0; i < 26; i++) {
             if (cnt[i] > max) {
