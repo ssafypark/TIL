@@ -23,11 +23,7 @@ public class BOJ_1919_애너그램만들기 {
             cntB[b.charAt(i) - 'a']++;
         }
         for (int i = 0; i < 26; i++) {
-            if (cntA[i] > cntB[i]) {
-                ans += cntA[i] - cntB[i];
-            } else if (cntB[i] > cntA[i]) {
-                ans += cntB[i] - cntA[i];
-            }
+            ans += Math.abs(cntA[i] - cntB[i]);
         }
         System.out.println(ans);
     }
