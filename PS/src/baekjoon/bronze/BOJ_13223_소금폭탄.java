@@ -6,43 +6,42 @@ import java.io.InputStreamReader;
 
 public class BOJ_13223_소금폭탄 {
 
-    private static int currentHour;
-    private static int currentMinute;
-    private static int currentSecond;
-    private static int dropHour;
-    private static int dropMinute;
-    private static int dropSecond;
-    private static int currentTime;
-    private static int dropTime;
-    private static int needTime;
-    private static int needHour;
-    private static int needMinute;
-    private static int needSecond;
-    private static String[] current;
-    private static String[] drop;
+    private static int hour;
+    private static int minute;
+    private static int second;
+    private static int nowHour;
+    private static int nowMinute;
+    private static int nowSecond;
+    private static int afterHour;
+    private static int afterMinute;
+    private static int afterSecond;
+    private static String[] nowTime;
+    private static String[] afterTime;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        current = br.readLine().split(":");
-        currentHour = Integer.parseInt(current[0]);
-        currentMinute = Integer.parseInt(current[1]);
-        currentSecond = Integer.parseInt(current[2]);
-        currentTime = currentHour * 3600 + currentMinute * 60 + currentSecond;
-
-        drop = br.readLine().split(":");
-        dropHour = Integer.parseInt(drop[0]);
-        dropMinute = Integer.parseInt(drop[1]);
-        dropSecond = Integer.parseInt(drop[2]);
-        dropTime = dropHour * 3600 + dropMinute * 60 + dropSecond;
-
-        needTime = dropTime - currentTime;
-        if (needTime <= 0) {
-            needTime += 24 * 3600;
+        nowTime = br.readLine().split(":");
+        afterTime = br.readLine().split(":");
+        nowHour = Integer.parseInt(nowTime[0]);
+        nowMinute = Integer.parseInt(nowTime[1]);
+        nowSecond = Integer.parseInt(nowTime[2]);
+        afterHour = Integer.parseInt(afterTime[0]);
+        afterMinute = Integer.parseInt(afterTime[1]);
+        afterSecond = Integer.parseInt(afterTime[2]);
+        hour = afterHour - nowHour;
+        minute = afterMinute - nowMinute;
+        second = afterSecond - nowSecond;
+        if (second < 0) {
+            second += 60;
+            minute--;
         }
-        needHour = needTime / 3600;
-        needMinute = (needTime % 3600) / 60;
-        needSecond = needTime % 60;
-
-        System.out.printf("%02d:%02d:%02d", needHour, needMinute, needSecond);
+        if (minute < 0) {
+            minute += 60;
+            hour--;
+        }
+        if (hour <= 0) {
+            hour += 24;
+        }
+        System.out.printf("%02d:%02d:%02d", hour, minute, second);
     }
 }
