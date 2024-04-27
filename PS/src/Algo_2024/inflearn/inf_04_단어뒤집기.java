@@ -8,9 +8,18 @@ import java.util.ArrayList;
 public class inf_04_단어뒤집기 {
     public static ArrayList<String> solution(int N, String[] str) {
         ArrayList<String> answer = new ArrayList<>();
-        for(String x : str) {
-            String temp = new StringBuilder(x).reverse().toString();
-            answer.add(temp);
+        for (String x : str) {
+            char[] c = x.toCharArray();
+            int lt = 0;
+            int rt = x.length() - 1;
+            while(lt < rt) {
+                char temp = c[lt];
+                c[lt] = c[rt];
+                c[rt] = temp;
+                lt++;
+                rt--;
+            }
+            answer.add(String.valueOf(c));
         }
         return answer;
     }
