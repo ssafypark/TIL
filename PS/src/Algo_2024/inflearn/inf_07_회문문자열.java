@@ -6,13 +6,10 @@ import java.io.InputStreamReader;
 
 public class inf_07_회문문자열 {
     public static String solution(String str) {
-        String answer = "YES";
-        str = str.toUpperCase();
-        int len = str.length();
-        for (int i = 0; i < len / 2; i++) {
-            if (str.charAt(i) != str.charAt(len - i - 1)) {
-                return "NO";
-            }
+        String answer = "NO";
+        String temp = new StringBuilder(str).reverse().toString();
+        if (str.equalsIgnoreCase(temp)) {
+            return "YES";
         }
         return answer;
     }
