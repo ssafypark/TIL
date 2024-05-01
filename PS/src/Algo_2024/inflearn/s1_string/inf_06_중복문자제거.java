@@ -1,29 +1,24 @@
-package Algo_2024.inflearn;
+package Algo_2024.inflearn.s1_string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class inf_01_문자찾기 {
-    public static int solution(String str, char c) {
-        int answer = 0;
-        str = str.toUpperCase();
-        c = Character.toUpperCase(c);
-
+public class inf_06_중복문자제거 {
+    public static String solution(String str) {
+        String answer = "";
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == c) {
-                answer++;
+            if (str.indexOf(str.charAt(i)) == i) {
+                answer += str.charAt(i);
             }
         }
+
         return answer;
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
-        char c = br.readLine().charAt(0);
-
-        System.out.println(solution(str, c));
+        System.out.println(solution(str));
     }
-
 }

@@ -1,24 +1,23 @@
-package Algo_2024.inflearn;
+package Algo_2024.inflearn.s1_string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-/*
-    [ ASCII Code ]
-    총 25개의 문자
-    대문자 : 65 ~ 90
-    소문자 : 97 ~ 122
 
-    대문자와 소문자의 차이는 32의 차인
- */
-public class inf_02_대소문자변환 {
+public class inf_11_문자열압축 {
     public static String solution(String str) {
         String answer = "";
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >= 97 && str.charAt(i) <= 122) {
-                answer += (char) (str.charAt(i) - 32);
+        str += " ";
+        int cnt = 1;
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                cnt++;
             } else {
-                answer += (char) (str.charAt(i) + 32);
+                answer += str.charAt(i);
+                if (cnt > 1) {
+                    answer += String.valueOf(cnt);
+                    cnt = 1;
+                }
             }
         }
         return answer;
@@ -30,5 +29,4 @@ public class inf_02_대소문자변환 {
 
         System.out.println(solution(str));
     }
-
 }

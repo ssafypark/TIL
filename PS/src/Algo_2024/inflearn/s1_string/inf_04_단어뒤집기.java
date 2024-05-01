@@ -1,4 +1,4 @@
-package Algo_2024.inflearn;
+package Algo_2024.inflearn.s1_string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
