@@ -18,29 +18,21 @@ public class inf_09_격자판최대합 {
 
     public static int solution(int[][] arr) {
         int answer = 0;
-        // 가로
+        // 가로, 세로
         for (int i = 0; i < N; i++) {
             row = 0;
-            for (int j = 0; j < N; j++) {
-                row += arr[i][j];
-            }
-            rowMax = Math.max(rowMax, row);
-        }
-        // 세로
-        for (int i = 0; i < N; i++) {
             col = 0;
             for (int j = 0; j < N; j++) {
+                row += arr[i][j];
                 col += arr[j][i];
             }
+            rowMax = Math.max(rowMax, row);
             colMax = Math.max(colMax, col);
         }
-        // 왼오 대각
+        // 왼오 대각, 오왼 대각
         for (int i = 0; i < N; i++) {
             cross += arr[i][i];
-        }
-        // 오왼 대각
-        for (int i = N - 1; i >= 0; i--) {
-            reverse_cross += arr[i][i];
+            reverse_cross += arr[i][N - i - 1];
         }
         answer = Math.max(Math.max(rowMax, colMax), Math.max(cross, reverse_cross));
         return answer;
