@@ -15,7 +15,7 @@ public class inf_11_문자열압축 {
             } else {
                 answer += str.charAt(i);
                 if (cnt > 1) {
-                    answer += String.valueOf(cnt);
+                    answer += String.valueOf(cnt);  // Integer.toString() 하고 동일한 기능
                     cnt = 1;
                 }
             }
