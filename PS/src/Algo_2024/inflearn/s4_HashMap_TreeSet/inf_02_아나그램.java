@@ -11,13 +11,16 @@ public class inf_02_아나그램 {
     private static String str2;
 
     public static String solution(String str1, String str2) {
-        String answer = " ";
+        String answer = "YES";
         HashMap<Character, Integer> hashMap = new HashMap<>();
         for (char x : str1.toCharArray()) {
             hashMap.put(x, hashMap.getOrDefault(x, 0) + 1);
         }
         for (char x : str2.toCharArray()) {
-
+            if (!hashMap.containsKey(x) || hashMap.get(x) == 0) {
+                return "NO";
+            }
+            hashMap.put(x, hashMap.get(x) - 1);
         }
         return answer;
     }
