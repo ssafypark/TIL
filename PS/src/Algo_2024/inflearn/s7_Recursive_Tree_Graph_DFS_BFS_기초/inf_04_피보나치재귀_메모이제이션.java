@@ -12,6 +12,9 @@ public class inf_04_피보나치재귀_메모이제이션 {
     private static int[] fibo;
 
     public static int DFS(int n) {
+        if (fibo[n] > 0) { // 최적화 조건문
+            return fibo[n];
+        }
         if (n == 1) {
             return fibo[n] = 1;
         } else if (n == 2) {
