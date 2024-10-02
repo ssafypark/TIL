@@ -1,4 +1,4 @@
-package Algo_2024.inflearn.s2_array_2;
+package Algo_2024.inflearn.Prac.s2_array_2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
