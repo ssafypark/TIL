@@ -6,7 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class inf_07_좌표정렬 {
+/*
+* 1차원 배열에서 내림차순(숫자, 문자 가능)
+* Arrays.sort(arr, Collections.reverseOrder());
+* */
+public class inf_07_복습필_좌표정렬 {
 
     private static int N;
     private static int[][] arr;
@@ -15,8 +19,10 @@ public class inf_07_좌표정렬 {
         Arrays.sort(arr, (a, b) -> {
             if (a[0] == b[0]) {
                 return Integer.compare(a[1], b[1]);
+                // return Integer.compare(b[1], a[1]); // 내림차순
             } else {
                 return Integer.compare(a[0], b[0]);
+                // return Integer.compare(b[0], a[0]); // 내림차순
             }
         });
         return arr;
