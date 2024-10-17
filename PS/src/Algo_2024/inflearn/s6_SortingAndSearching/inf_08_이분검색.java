@@ -10,7 +10,6 @@ public class inf_08_이분검색 {
 
     private static int N;
     private static int M;
-    private static int idx;
     private static int[] arr;
 
     public static int solution(int[] arr) {
