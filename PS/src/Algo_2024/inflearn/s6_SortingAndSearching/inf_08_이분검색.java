@@ -15,9 +15,16 @@ public class inf_08_이분검색 {
     public static int solution(int[] arr) {
         int answer = -1;
         Arrays.sort(arr);
-        for (int i = 0; i < arr.length;i++) {
-            if (arr[i] == M) {
-                return i + 1;
+        int lt = 0;
+        int rt = N - 1;
+        while (lt <= rt) {
+            int mid = (lt + rt) /2;
+            if (arr[mid] == M) {
+                return mid + 1;
+            } else if (arr[mid] > M) {
+                rt = mid - 1;
+            } else {
+                lt = mid + 1;
             }
         }
         return answer;
