@@ -14,7 +14,7 @@ public class inf_09_말단노드까지가장짧은경로_DFS {
 
     public static int DFS(int depth, Node09 root) {
         if (root.lt == null && root.rt == null) {
-//            return root.data;
+//            return root.data; -> 이걸로 하면 노드 번호로 출력
             return depth;
         } else {
             return Math.min(DFS(depth + 1, root.lt), DFS(depth + 1, root.rt));
