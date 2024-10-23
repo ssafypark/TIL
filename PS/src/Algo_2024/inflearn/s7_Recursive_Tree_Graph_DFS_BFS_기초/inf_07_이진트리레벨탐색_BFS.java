@@ -14,11 +14,19 @@ public class inf_07_이진트리레벨탐색_BFS {
         int L = 0;
         while (!queue.isEmpty()) {
             int len = queue.size();
-            System.out.print(L + " ");
+            System.out.print(L + " : ");
             for (int i = 0; i < len; i++) {
                 Node07 cur = queue.poll();
                 System.out.print(cur.data + " ");
+                if (cur.lt != null) {
+                    queue.offer(cur.lt);
+                }
+                if (cur.rt != null) {
+                    queue.offer(cur.rt);
+                }
             }
+            L++;
+            System.out.println();
         }
     }
 
