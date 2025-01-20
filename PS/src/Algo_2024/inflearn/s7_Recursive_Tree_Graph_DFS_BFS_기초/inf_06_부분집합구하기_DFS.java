@@ -32,9 +32,9 @@ public class inf_06_부분집합구하기_DFS {
             }
         } else {
             ch[L] = 1;
-            DFS(L + 1);
+            DFS(L + 1); // 왼쪽으로 뻗을때
             ch[L] = 0;
-            DFS(L + 1);
+            DFS(L + 1); // 오른쪽으로 뻗을때, 위의 DFS에 계속 걸리다가 마지막 레이어에서만 걸림
         }
     }
 
