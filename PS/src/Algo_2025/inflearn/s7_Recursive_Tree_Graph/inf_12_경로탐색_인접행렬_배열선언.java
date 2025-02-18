@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class inf_12_경로탐색 {
+public class inf_12_경로탐색_인접행렬_배열선언 {
 
     private static int n;
     private static int m;
