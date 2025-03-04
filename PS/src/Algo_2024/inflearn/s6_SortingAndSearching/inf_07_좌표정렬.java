@@ -17,6 +17,11 @@ import java.util.StringTokenizer;
 3 6
 
 출력
+1 2
+1 3
+2 5
+2 7
+3 6
 
 * */
 public class inf_07_좌표정렬 {
